@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html -->
+    <center>
+        <h2>Enter the values</h2>
+        Num1 <input id="num1" type="number"><br><br>
+        Num2 <input id="num2" type="number"><br><br>
+        <button onclick="sum()">ADD</button><br><br>
+        <h3 id="result"></h3>
+    </center>
+    <!-- JavaScript -->
+    <script>
+        function sum(){
+            let a = parseInt(document.getElementById("num1").value)
+            let b = parseInt(document.getElementById("num2").value)
+            let sum = a + b
+
+            document.getElementById("result").innerHTML = "the sum of " +a+ " and " +b+ " is " + sum
+        }
+        function greet(name){
+            console.log("hello" + name)
+        }
+        greet("izyan")
+    </script>
+</body>
+</html>

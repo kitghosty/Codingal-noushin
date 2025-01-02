@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student = {
+            name: "Noushin",
+            age: '15',
+            grade: '9',
+            hobby: "drawing",
+            favsport: "football"
+        }
+        var colors = ["white","black","red","blue","orange","green"];
+        document.write("Student name is: " + student.name,"<br>","Student favourite sport is:" + student.favsport,"<br>");
+        document.write("Before popping,colors are: " + colors.join("+"),"<br>");
+        document.write("My favourite color is: " + colors[1], "<br>");
+        colors.pop();
+        document.write("After popping,the colors are: " , + colors.join("*"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating an object
+        let car = {
+            brand: "Nissan",
+            model: "GTR R35",
+            year: 2022,
+            ownerName: "student",
+            start: function(){
+                console.log("The car is starting.");
+            }
+        }
+
+        // fething properties using dot and brackets
+        console.log(car.brand); //1st method
+        console.log(car.model);
+        console.log(car.ownerName);
+        console.log(car["year"]); //2nd method
+
+        // manipulating the values
+        car.model = "Camry";
+        console.log(car);
+        car.color = "Red";
+        console.log(car.color)
+
+        // arguments in obejcts
+        //1
+        let person = {
+            name: "John",
+            greet: function(parameter){
+                console.log(parameter + ',' + this.name)
+            }
+        }
+         person.greet("Hello")
+
+        //  built-in data object
+        let currentdate = new Date();
+        console.log(currentdate); 
+        console.log(currentdate.getFullYear());
+
+        console.log(Math.PI) //Output:3.14159265358
+        console.log(Math.round(4.7)); //Output:5
+        console.log(Math.sqrt(16)); //Output:4
+        console.log(Math.random()); //Output:0.5065636593750382
+
+
+        
+    </script>
+</body>
+</html>

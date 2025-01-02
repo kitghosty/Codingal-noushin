@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function name(){
+            console.log("Hello World");
+        }
+        
+        const name2 = function(){
+            console.log("Hello World2");
+        }
+       
+        const name3 = () => {
+            console.log("Hello World3");
+        }
+        
+        const name4 = (a , b) => console.log (a + b) ;
+       
+        name()//basic function
+        name2() //anonymous function
+        name3() //arrow function
+        name4() //arrow function
+
+        //string to number
+        let str = "123";
+        let num = Number(str);
+        console.log(str + 10);
+
+        //number to string
+        let number = 50;
+        let string = String(number);
+        console.log(string + "is a string");
+
+        //boolean to number true=1 false=0
+        let bool = true
+        console.log(Number(bool));
+
+        //regular expression
+        let strng = "Hello123";
+        let regex = /\d/; // \d means any digit
+        console.log(regex.test(strng)); //output: true
+
+        //error handling
+        try {
+        let json = '{"name": "John"}' //Valid JSON String
+        let user = JSON.parse(json)
+        console.log(user.name);
+        //Invalid JSON string
+        let invalidjson = "{name : 'John'}";
+        JSON.parse(invalidjson);
+    } catch(error){
+        console.log("An error occured" , error.message)
+    }
+
+    </script>
+</body>
+</html>

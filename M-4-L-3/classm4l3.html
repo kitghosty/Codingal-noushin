@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // stirng method :toUpperCase()
+        let name = "coding";
+        let upperCaseName = name.toUpperCase();
+        let lowerCaseName = name.toLowerCase();
+        console.log(upperCaseName);  // Output:CODING
+        console.log(lowerCaseName);  // Output:coding
+
+        // array method :push()
+        let numbers = [1,2,3];
+        numbers.push(4);
+        console.log(numbers);  // Output [1,2,3,4]
+
+        // Regular Expression
+        // /\d/ used for digits, /\w/ used for words, /\s/ used for spaces
+        let text = "Hello123"
+        // check if a string contains number
+        let hasNumbers = /\d/.test(text)
+        console.log(hasNumbers); // Output:True
+        // check if a string contains words
+        let hasWords = /\w/.test(text)
+        console.log(hasWords); // Output:True
+        // check if a string contains spaces
+            let hasSpaces = /\s/.test(text)
+            console.log(hasSpaces); // Output:False
+
+        // Replace digits with '*'
+        let replacedText = text.replace(/\d/g , '*');
+        console.log(replacedText) //Output: Hello***
+
+        // Loops
+        // For Loops
+        for (let i=1; i<=5; i++) {
+            console.log(i) //Output :1,2,3,4,5
+        }
+        // While Loops
+        // let count = 1;
+            //while (count <= 5) {
+                //console.log(count)
+                //count++
+           // }
+
+        //  Switch
+        let day = "Monday";
+        switch(day){
+            case "Monday":
+                console.log("Start of the work week!")
+                break;
+            case "Wednesday":
+                console.log("Midweek already")
+                break;
+            case "Friday":
+                console.log("Weekend is near!")
+                break;
+            default:
+                console.log("Enjoy your day")
+                break;
+        // Output :Start of the work week            
+        }
+    </script>
+</body>
+</html>

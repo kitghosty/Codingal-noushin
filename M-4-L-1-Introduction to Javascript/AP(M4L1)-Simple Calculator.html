@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <center>
+    <h2>Enter the values</h2>
+    NUM1 <input id="num1" type="number"><br><br>
+    NUM2 <input id="num2" type="number"><br><br>
+    <button onclick="sum()">ADD</button>
+    <button onclick="sub()">SUB</button>
+    <button onclick="multiply()">MULTIPLY</button>
+    <button onclick="divide()">DIVIDE</button>
+    <h3 id="result"></h3>
+    </center>
+    <script>
+       function sum(){
+        let a = parseInt(document.getElementById("num1").value)
+        let b = parseInt(document.getElementById("num1").value)
+        let sum = a + b
+        document.getElementById("result").innerHTML = "The sum of " +a+ " and " +b+ " is " + sum
+       } 
+       function sub(){
+        let a = parseInt(document.getElementById("num1").value)
+        let b = parseInt(document.getElementById("num2").value)
+        let sub = a - b
+        document.getElementById("result").innerHTML = "The substraction of " +a+ " and " +b+ " is " + sub
+       }
+       function multiply(){
+        let a = parseInt(document.getElementById("num1").value)
+        let b = parseInt(document.getElementById("num2").value)
+        let multiply = a * b
+        document.getElementById("result").innerHTML = "The multiplication of " +a+ " and " +b+ " is " + multiply
+       }
+       function divide(){
+        let a = parseInt(document.getElementById("num1").value)
+        let b = parseInt(document.getElementById("num2").value)
+        let divide = a / b
+        document.getElementById("result").innerHTML = "The division of " +a+ " and " +b+ " is " +divide
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this
+        const Car={
+            name: "Honda", 
+            ownerName: "Kitty",
+            color: "black",
+            details(){
+                console.log(`this is a ${this.name} , In this ${this.color} owned by ${this.ownername}`)
+            }
+        }
+        car.details()
+
+        //class
+        class Animal {
+            constructor(name){
+                this.name = name;
+            }
+
+            speak(){
+                console.log(`${this.name} makes a sound.`);
+            }
+        }
+
+        const dog = new Animal("Husky");
+        dog.speak() //Output: Dog makes a sound.
+
+        class Dog extends Animal{
+            speak(){
+                console.log(`${this.name} barks`);
+            }
+        }
+        const Mydog = new Dog("Buddy");
+        Mydog.speak() //Output:Buddy barks
+    </script>
+</body>
+</html>

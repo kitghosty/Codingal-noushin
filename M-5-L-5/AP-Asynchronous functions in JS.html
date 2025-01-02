@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchrornous Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+        var p1 = new Promise((res , rej) => {
+            return res("Reach home first");
+        })
+        var p2 = p1.then((data) => {
+            console.log(data);
+            return("Close the door and wash hands");
+        })
+        var p3 = p2.then((data) => {
+            console.log(data);
+            return("Eat the foods");
+        })
+        var p4 = p3.then((data) => {
+            console.log(data);
+            return("Now go to sleep");
+        })
+        var p5 = p4.then((data) => {
+            console.log(data);
+        })
+    </script>
+</body>
+</html>

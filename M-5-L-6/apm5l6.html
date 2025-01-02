@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+        rel="stylesheet">
+
+    <style>
+       body{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       font-family: Arial, Helvetica, sans-serif;
+       }
+       form{
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 10px 10px 20px rgb(0,0,0,0.5), -10px -10px 20px rgb(0,0,0,0.5);
+       }
+       label{
+        display: block;
+        margin-bottom: 5px;
+       }
+       input{
+        padding: 5px;
+        width: 100%;
+        border: none;
+        box-shadow: 0px 0px 10px rgb(0,0,0,0.5);
+        border-radius: 4px;
+       }
+       button{
+        width: 100%;
+        padding: 5px;
+        font-size: 15px;
+        background-color: rgba(4, 176, 219, 0.925);
+        color: white;
+        border: none;
+        border-radius: 5px;
+       }
+       button:hover{
+        background-color:rgb(14, 108, 230);
+        cursor: pointer;
+        transition-duration: 0.4s;
+       }
+       #errorMessage{
+        align-items: center;
+       }
+       #button1{
+        margin-bottom: 25px;
+        background-color: rgb(73, 134, 214);
+        width: 100%;
+        font-size: 15px;
+        border-radius: 5%;
+        color: white;
+       }
+       #button1:hover{
+        background-color: rgb(4, 108, 177);
+        transition-duration: 0.5s;
+        cursor: pointer;
+       }
+       hr{
+        margin-bottom: 20px;
+        margin-top: 5px ;
+       }
+       #text{
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+       }
+       h1{
+        font-family: 'Playwrite HR Lijeva' , cursive;
+       }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <h1 >Instagram</h1>
+        <button id="button1" type="button">Log in with Facebook</button><hr>
+    <label for="name"></label>
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <label for="username"></label>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <label for="email"></label>
+    <input type="email" id="email" placeholder="Email address"><br><br>
+    <label for="age"></label>
+    <input type="number" id="age" placeholder="Age"><br><br>
+    <label for="mobilenumber"></label>
+    <input type="text" id="mobilenumber" placeholder="Mobile number"><br><br>
+    <button type="button" onclick="validateForm()">Sign up</button>
+    <h4 id="errorMessage"></h4>
+    </form>
+    
+    <script>
+        function validateForm(){
+            const name = document.getElementById("name").value
+            const username = document.getElementById("username").value
+            const email = document.getElementById("email").value
+            const age = document.getElementById("age").value
+            const mobilenumber = document.getElementById("mobilenumber").value
+            const errorMessage = document.getElementById("errorMessage")
+            if (name === "" || username === "" || email === "" || age === "" || mobilenumber === ""){
+                errorMessage.textContent = "All fields are required!";
+                errorMessage.style.color = "red"
+            }else if(age < 18){
+                errorMessage.textContent = "You must be at least 18 to sign up an Instagram account!";
+                errorMessage.style.color = "red";
+            }else {
+                errorMessage.textContent = "Form submitted successfully"
+                errorMessage.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

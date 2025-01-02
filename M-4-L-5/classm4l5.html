@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating arrays
+        // 1st method
+        const cars = ["Porshche","Nissan","Mercedes"];
+        console.log(cars);
+        const myArr = [1 , 2 , "three" , 4,5]
+        console.log(myArr);
+        // 2nd method
+        const myArr2 =new Array ("new","array","is","created");
+        console.log(myArr2)
+
+        // changing the array elements
+        cars[0] = "BMW";
+        console.log(cars);
+        myArr[2] = 3;
+        console.log(myArr);
+
+        // adding array elements(from the last)
+        cars.push("Lamborghini");
+        console.log(cars)
+        // removing array elements
+        // cars.pop("Mercedes");
+        // console.log(cars)
+
+        // removing the first element from an array
+        cars.shift();
+        console.log(cars);
+
+        // adding the first element of an array
+        cars.unshift("Toyota");
+        console.log(cars);
+
+        // call stack
+        function first(){
+            console.log("First fucntion");
+        }
+        function second(){
+            first();
+            console.log("Second function");
+        }
+        second();
+        
+        // random value using Math.random
+        var randomvalue = Math.floor(Math.random() *100) + 1;
+        console.log(randomvalue);
+
+        // math obj
+        let numbers = [10,20,30,40];
+        let maxNumber = Math.max(...numbers);
+        console.log(maxNumber);
+    </script>
+</body>
+</html>

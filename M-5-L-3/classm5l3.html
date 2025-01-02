@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Multiple every element in the array with 10</h1>
+        <hr>
+        <h2 id = "Product_value"></h2>
+    </center>
+    <script>
+        //array sort
+        let numbers = [5, 3, 8, 1, 2];
+        numbers.sort((a , b) => a - b);
+        console.log(numbers); // 1,2,3,5,8
+
+        let numbers2 = [5, 3, 8, 1, 2];
+        numbers2.sort((b , a) => b - a);
+        console.log(numbers2) //8,5,3,2,1
+
+        //reverse array
+        let numbers3 = [1 , 2 , 3, 4, 5];
+        numbers3.reverse();
+        console.log(numbers3); //Output : 5,4,3,2,1
+
+        //array sort(string)
+        let strings = ["banana" , "apple" , "cherry"];
+        strings.sort(); //in alphabetical order regarding the first letter of words
+        console.log(strings);//Output: apple,banana,cherry
+
+        //map function
+        let numbers4 = [1 , 2 , 3 , 4 , 5];
+        let doubled = numbers4.map((num) => num * 2); //1*2=2, 2*2=4, 3*2=6, 4*2=8, 5*2=10,
+        console.log(doubled); //Output:2,4,6,8,10
+
+        //evaluate function
+        let x = 10;
+        let y = 5;
+        let expression = "x + y" //The string to be evaluated
+        let result = eval(expression); //evaluates "x + y"
+        console.log(result); //Output:15
+
+        //Activity 1
+        let nmbers = [28 , 6 ,19 ,95];
+        function myFunction(num){
+            return num * 10
+        };
+        var newarray = nmbers.map(myFunction);
+        /*
+        //2nd method(arrow)
+        // var newarray = nmbers.map((num) => {return num * 10});
+
+        //3rd method(normaal function)
+        var newarray = nmbers.map(function(num){return num * 10})
+        */
+       document.getElementById("Product_value").innerHTML = newarray;
+
+
+
+    </script>
+</body>
+</html>

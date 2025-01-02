@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var example
+        function Varfunction(){
+
+            function nearestfunction(){
+                var Near = 1;
+                console.log("Inside child function: " , Near); //Output: Inside child function: 1
+            }
+            Near = 2; //reassign
+            console.log("Outside child function: " , Near); //Output: Outside child function: 2
+            // calling the child function
+            nearestfunction()
+        }
+
+        // calling of parent function
+        Varfunction()
+
+        //let example
+        if(true){
+            let a = 10;
+            a = 11; //redefine is not but reassign is possible
+            console.log(a); //blocked scope
+        }
+
+        //const example
+        if(true){
+            const a = 10; //redefine and reassign ar not possible as it is constant
+            console.log(a); //blocked scope
+        }
+
+        // data types examples
+        let name = "Noushin" //string data type
+        let age = 25 //number data type
+        let isStudent = true //boolean data type
+
+        // Conditional statement
+        if(isStudent){
+            console.log(`${name} is a student.`);
+        } else{
+            console.log(`${name} is not a student. `);
+        }
+
+        //while loop
+        let counter = 0;
+        let maxCount = 5;
+        while(counter < maxCount){
+            console.log(`Counter is at ${counter}`);
+            counter++;
+        }
+    </script>
+</body>
+</html>
